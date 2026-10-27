@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "installCommand": "npm ci",
+  "buildCommand": "npm test && npm run build",
+  "outputDirectory": "dist",
+  "redirects": [
+    { "source": "/planning", "destination": "/planning/index.html", "permanent": true },
+    { "source": "/design", "destination": "/?view=design", "permanent": false },
+    { "source": "/design/", "destination": "/?view=design", "permanent": false }
+  ],
+  "rewrites": [
+    { "source": "/admin", "destination": "/admin.html" },
+    { "source": "/planning/", "destination": "/planning/index.html" }
+  ]
+}
